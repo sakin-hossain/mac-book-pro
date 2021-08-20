@@ -4,13 +4,78 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BootStrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
     <title>Buy MAC Book Pro</title>
 </head>
 <body>
-    
-
+    <main class="container mt-5">
+        <div class="d-flex justify-content-center ">
+            <section>
+                <!-- MAC img -->
+                <div>
+                    <img class="img-fluid" class="w-100" src="images/mac.png" alt="">
+                </div>
+            </section>
+            <section>
+                <div class="mx-5">
+                    <!-- MAC info -->
+                    <h1 class="fw-bold">Customize  your Blue 24-inch iMac with Apple M1 chip</h1>
+                    <p class="fw-bold">Apple M1 chip with 8 core CPU with performance cores and 4 efficiency cores, 7-core GPU, and 16-core Neural Engine 8GB unified memory 256GB SSD storage Two Thunderbolt / USB 4 ports Magic Mouse, Magic Keyboard - US English</p>
+        
+                    <!-- Memory -->
+                    <div class="my-5">
+                        <h4 class="fw-bold mb-2">Memory</h4>
+                        <button id="memory-8gb" class ="btn-outline-dark rounded p-2">8GB unified memory</button>
+                        <button id="memory-16gb" class ="btn-outline-dark rounded p-2">16GB unified memory</button>
+                    </div class="my-5">
+                    <!-- Storage -->
+                    <div>
+                        <h4 class="fw-bold mb-2">Storage</h4>
+                        <button id="storage-256gb" class ="btn-outline-dark rounded p-2">256GB SSD Storage</button>
+                        <button id="storage-512gb" class ="btn-outline-dark rounded p-2">512GB SSD Storage</button>
+                        <button id="storage-1tb" class ="btn-outline-dark rounded p-2">1TB SSD Storage</button>
+                    </div>
+                    <!-- Delivery Option -->
+                    <div class="my-5">
+                        <h4 class="fw-bold mb-2">Choose Your Delivery Option</h4>
+                        <button id="free-delivery" class ="btn-outline-dark rounded p-2">Friday, Aug 25 Free Prime Delivery</button>
+                        <button id="delivery-with-charge" class ="btn-outline-dark rounded p-2">Friday, Aug 21 Delivery Charge $20</button>
+                    </div>
+                </div>
+                <!-- Calculation -->
+                    <div class="d-flex justify-content-evenly">
+                        <div>
+                            <h4 class="fw-bold">Best Price</h4>
+                            <h4 class="fw-bold">Extra Memory Cost</h4>
+                            <h4 class="fw-bold">Extra Storage Cost</h4>
+                            <h4 class="fw-bold">Delivery Charge</h4>
+                            <h4 class="fw-bold">Total Price</h4>
+                        </div>
+                        <hr>
+                        <div>
+                            <h4 class="fw-bold">$<span id="best-price">1299</span></h4>
+                            <h4 class="fw-bold">$<span id="memory-cost">0</span></h4>
+                            <h4 class="fw-bold">$<span id="storage-cost">0</span></h4>
+                            <h4 class="fw-bold">$<span id="delivery-cost">0</span></h4>
+                            <h4 class="fw-bold">$<span id="total-price">1299</span></h4>
+                        </div>
+                    </div>
+                <!-- Promo Code -->
+                <div class="text-center m-5">
+                    <input id="promo-code" class="p-1 rounded" type="text" placeholder="Please Give Coupon">
+                    <button id="apply-promo-code" class="btn btn-danger">Apply </button>
+                </div>
+            </section>
+        </div>
+        <!-- Total Price After Discount -->
+        <section>
+            <hr>
+            <h2 class="text-center mb-5">Total: $ <span id="total-cost">1299</span></h2>
+        </section>
+    </main>
     <!-- Script -->
     <script src="js/script.js"></script>
 </body>
