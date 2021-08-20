@@ -25,7 +25,8 @@ function calculateTotal(){
     const deliveryCost = document.getElementById('delivery-cost').innerText;
 
     const total = parseInt(memoryCost) + parseInt(storageCost) + parseInt(deliveryCost) +1299;
-    return totalPrice.innerText = total;
+    totalPrice.innerText = total;
+    totalCostAfterPromoCode.innerText = total;
 }
 
 memory8Gb.addEventListener('click',function(){
@@ -57,7 +58,11 @@ deliveryWithCharge.addEventListener('click',function(){
 promoCodeApplyBtn.addEventListener('click', function(){
     const promoCode = promoCodeInput.value;
     if(promoCode.toLowerCase() == 'stevekaku'){
-        const discountAmount = parseInt(totalPrice.innerText) * 0.20;
-        totalCostAfterPromoCode.innerText = parseFloat(totalPrice.innerText) - discountAmount;
+        const discountAmount = parseInt(totalCostAfterPromoCode.innerText) * 0.20;
+        totalCostAfterPromoCode.innerText = parseFloat(totalCostAfterPromoCode.innerText) - discountAmount;
     }
-})
+    else{
+        alert('Please Provide Valid Promo Code');
+    }
+    promoCodeInput.value = '';
+});
