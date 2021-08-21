@@ -29,6 +29,7 @@ function calculateTotal(){
     totalCostAfterPromoCode.innerText = total;
 }
 
+//Call Event Listener
 memory8Gb.addEventListener('click',function(){
     updateCost('memory',0)
 });
@@ -58,8 +59,8 @@ deliveryWithCharge.addEventListener('click',function(){
 promoCodeApplyBtn.addEventListener('click', function(){
     const promoCode = promoCodeInput.value;
     if(promoCode.toLowerCase() == 'stevekaku'){
-        const discountAmount = parseInt(totalCostAfterPromoCode.innerText) * 0.20;
-        totalCostAfterPromoCode.innerText = parseFloat(totalCostAfterPromoCode.innerText) - discountAmount;
+        const discountAmount = parseInt(totalPrice.innerText) * 0.20;
+        totalCostAfterPromoCode.innerText = parseFloat(totalPrice.innerText) - discountAmount;
     }
     else{
         alert('Please Provide Valid Promo Code');
